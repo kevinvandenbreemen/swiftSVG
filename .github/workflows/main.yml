@@ -15,4 +15,4 @@ jobs:
         # The version of Swift.
         swift-version: '5.1.4'
     - name: Test
-      run: make linuxTest
+      run: make testLinux
