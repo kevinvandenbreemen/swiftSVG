@@ -14,7 +14,7 @@ class RectangleTests: XCTestCase {
         let expected = 
         """
         <svg width="100" height="100">
-        \t<rect x="10" y="10" width="100" height="200" />
+        \t<rect x="10" y="20" width="100" height="200" />
         </svg>
         """
 
