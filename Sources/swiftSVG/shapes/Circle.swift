@@ -14,6 +14,6 @@ public class Circle: Element, Renderable {
     }
     
     public func render() -> String {
-        return "<circle cx=\"\(centerX)\" cy=\"\(centerY)\" r=\"\(radius)\" \(id.isEmpty ? "" : "id=\"\(id)\" ")/>"
+        return "<circle cx=\"\(centerX)\" cy=\"\(centerY)\" r=\"\(radius)\" \(idString)/>"
     }
 }

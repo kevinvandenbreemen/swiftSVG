@@ -17,7 +17,7 @@ public class Rectangle: Element, Renderable {
     
 
     public func render() -> String {
-        return "<rect x=\"\(x)\" y=\"\(y)\" width=\"\(width)\" height=\"\(height)\" \(id.isEmpty ? "" : "id=\"\(id)\" ")/>"
+        return "<rect x=\"\(x)\" y=\"\(y)\" width=\"\(width)\" height=\"\(height)\" \(idString)/>"
     }
     
 }
