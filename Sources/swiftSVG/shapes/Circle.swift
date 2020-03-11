@@ -1,8 +1,11 @@
-public class Circle: Renderable {
+public class Circle: Element, Renderable {
 
     private let centerX: Int
     private let centerY: Int
     private let radius: Int
+
+    //  MARK:- Element
+    public var id: String = ""
     
     public init(centerX: Int, centerY: Int, radius: Int) {
         self.centerX = centerX
@@ -11,6 +14,6 @@ public class Circle: Renderable {
     }
     
     public func render() -> String {
-        return "<circle cx=\"\(centerX)\" cy=\"\(centerY)\" r=\"\(radius)\" />"
+        return "<circle cx=\"\(centerX)\" cy=\"\(centerY)\" r=\"\(radius)\" \(id.isEmpty ? "" : "id=\"\(id)\" ")/>"
     }
 }

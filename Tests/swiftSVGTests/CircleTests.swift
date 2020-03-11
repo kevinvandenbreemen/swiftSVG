@@ -23,6 +23,25 @@ class CircleTests: XCTestCase {
 
     }
 
+    func testGiveCircleAnID() {
+        let svg = SVG(width: 100, height: 100)
+        let circle = Circle(centerX: 50, centerY: 50, radius: 40)
+
+        svg.add(circle)
+        circle.id = "myCircle"
+
+        let result = svg.render()
+
+        let expectedResult = 
+        """
+        <svg width="100" height="100">
+        \t<circle cx="50" cy="50" r="40" id="myCircle" />
+        </svg>
+        """
+
+        XCTAssertEqual(result, expectedResult)
+    }
+
     static var allTests = [
         ("Create a Circle", testMakeCircle)
     ]
