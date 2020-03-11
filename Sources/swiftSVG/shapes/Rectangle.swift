@@ -1,10 +1,12 @@
-public class Rectangle: Renderable {
+public class Rectangle: Element, Renderable {
 
     var x: Int
     var y: Int
     var width: Int
     var height: Int
 
+    //  MARK:- Element
+    public var id: String = ""
     
     public init(x: Int, y: Int, width: Int, height: Int) {
         self.x = x
@@ -15,7 +17,7 @@ public class Rectangle: Renderable {
     
 
     public func render() -> String {
-        return "<rect x=\"\(x)\" y=\"\(y)\" width=\"\(width)\" height=\"\(height)\" />"
+        return "<rect x=\"\(x)\" y=\"\(y)\" width=\"\(width)\" height=\"\(height)\" \(id.isEmpty ? "" : "id=\"\(id)\" ")/>"
     }
     
 }
